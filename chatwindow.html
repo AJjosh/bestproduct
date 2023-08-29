@@ -1,26 +1,10 @@
 <Html>
-   <script>
-      window.onload = function(){ 
-var windowObjectReference = null;
-   document.getElementsByClassName("chat-overlay-header")[0].onclick = function (e) {
-       e.preventDefault();
-      if(windowObjectReference == null || windowObjectReference.closed) {
-          var height=500;
-          var width=500;
-          var l = document.body.clientWidth - (width/2);
-          var t = document.body.scrollHeight - (height/2);
-          windowObjectReference = window.open("https://ap.demo.amelia.com/Amelia/ui/ashokjoshi/?embed=iframe&domainCode=clientaudemo4&embed=iframe", "", 'height='+height+', width='+width+', left='+l+', top='+t);
-      } else {
-        windowObjectReference.focus();
-      }
-     return false;
-   }
-      };
-</script>
    
   <body style="background-color:#FFFF00">
   <body>
     Hello this is a sample file for a chat window
+       </body>
+</Html>
 
  
 <div class="chat-overlay chat-overlay-closed">
@@ -55,7 +39,25 @@ var windowObjectReference = null;
       </div>
     </div>
   </div>
-      </body>
+
+  <script>
+      window.onload = function(){ 
+var windowObjectReference = null;
+   document.getElementsByClassName("chat-overlay-header")[0].onclick = function (e) {
+       e.preventDefault();
+      if(windowObjectReference == null || windowObjectReference.closed) {
+          var height=500;
+          var width=500;
+          var l = document.body.clientWidth - (width/2);
+          var t = document.body.scrollHeight - (height/2);
+          windowObjectReference = window.open("https://ap.demo.amelia.com/Amelia/ui/ashokjoshi/?embed=iframe&domainCode=clientaudemo4&embed=iframe", "", 'height='+height+', width='+width+', left='+l+', top='+t);
+      } else {
+        windowObjectReference.focus();
+      }
+     return false;
+   }
+      };
+</script>
 <style>
 .chat-overlay {
   position: fixed;
@@ -502,7 +504,6 @@ var clientConfig = {
     }
     /// END of Chat Overlay drag and drop
 </script>
-  </body>
-</Html>
+
 
 
